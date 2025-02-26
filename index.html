@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #1e1e2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .light-theme {
+            background: #ffffff;
+            color: #000000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #282a36;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+        #theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .hero-text {
+            font-size: 3rem;
+            margin-top: 150px;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: nameAnimation 3s ease-in-out infinite alternate;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        @keyframes nameAnimation {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+        .container {
+            background: #9400D3;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 700px;
+            text-align: center;
+        }
+        .light-theme .container {
+            background: #00ffff;
+        }
+        .contact-section {
+            margin-top: 50px;
+        }
+        .skills-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            white-space: nowrap;
+            justify-content: center;
+        }
+        .skill-box {
+            background: #ff9800;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            min-width: 100px;
+        }
+        .social-links a {
+            font-size: 2rem;
+            color: white;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #ff9800;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .project {
+            background: #ff9800;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .project a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Updated styles for social media links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px; /* Adds space between the name and the social media links */
+        }
+
+        .social-links a img {
+            background: none;
+        }
+        /* Default (Dark Mode) */
+.skill-box,
+.project,
+.contact-form button {
+    background: #724ad1; /* Orange */
+    color: white;
+}
+
+/* Light Mode */
+.light-theme .skill-box,
+.light-theme .project,
+.light-theme .contact-form button {
+    background: #00aaff; /* Bright Blue */
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+    <header id="home">
+        <h1 class="hero-text">
+            Aadithya Nayak V
+        </h1>
+        <div class="social-links">
+            <a href="https://github.com/AadithyaNayakV" target="_blank" style="font-size: 30px; color: white;">
+                💻 <!-- GitHub Emoji -->
+            </a>
+            <a href="https://www.linkedin.com/in/aadithya-nayak-v-3533a4293/" target="_blank" style="font-size: 30px; color: white;">
+                🔗 <!-- LinkedIn Emoji -->
+            </a>
+           
+        </div>
+        <p>Computer Science Student |<a href="https://www.sahyadri.edu.in/" >Sahyadri College of Engineering and Management</a></p>
+    </header>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am Aadithya Nayak V, a Computer Science student at Sahyadri College of Engineering and Management.
+            I have a deep passion for technology and problem-solving.
+        </p>
+        <p>
+            I am always excited to learn new technologies, build meaningful projects, and solve complex problems. 
+            I am particularly interested in AI, and full-stack web development. 
+            Currently, I am exploring cutting-edge tools and frameworks that help build smarter applications.
+        </p>
+        <p>
+            Outside of coding, I enjoy playing video games, reading tech blogs, and participating in hackathons and coding competitions.
+        </p>    </section>
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">C</div>
+            <div class="skill-box">Java</div>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">SQL</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">React</div>
+            <div class="skill-box">Node.js</div>
+            <div class="skill-box">Express</div>
+        </div>
+    </section>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>To-Do App</h3>
+                <p>A simple to-do list application built with React and Node.js.</p>
+                <a href="https://github.com/AadithyaNayakV/-Basic-Project-Using-JS" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Weather App</h3>
+                <p>A simple weather application built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/AadithyaNayakV/-Basic-Project-Using-JS" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container contact-section">
+        <h2>Contact</h2>
+        <form id="contact-form" class="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        
+    </footer>
+    <script>
+        document.getElementById("theme-toggle").addEventListener("click", function() {
+            document.body.classList.toggle("light-theme");
+            this.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
+        });
+    </script>
+</body>
+</html>
